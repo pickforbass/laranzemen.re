@@ -1,0 +1,57 @@
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFAE0A;
+    padding-bottom: 10px;
+}
+
+.header-content{
+    margin: 5px;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.container-fluid{
+    margin-bottom: 8vw !important;
+}
+
+.home-container{
+    width: 80%;
+    margin: 5px auto 5px auto;
+}
+
+
+menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    margin-top: 0;
+}
+
+menu>div{
+    margin: 15px;
+}
+
+.container{
+    width: 90%;
+    margin: 2vw auto 5vw auto;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.container div{
+    background-color: white;
+    text-align: center;
+    margin: 2%;
+    padding: 0;
+}
+
+.container div img{
+    margin : 2vw;
+}
