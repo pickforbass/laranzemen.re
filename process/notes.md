@@ -18,9 +18,19 @@ require login.php
 
 #### login.php
 vérifie l'utilisateur. Selon le cas, affiche  les inputs de connexion ou l'accès à l'espace utilisateur.
- 
- 
+require connDB.php
 
+#### connDB.php
+crée la connection à la DB et le canevas des requêtes.
+ 
+ 
 #### footer.php
 contient le footer et les balises fermantes
 
+
+
+###A faire
+Maquette
+Rajouter la notation sur les recettes.
+Ajouter la vue de l'annuaire des recettes et des articles
+idrecette -> id
