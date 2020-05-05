@@ -28,10 +28,10 @@ global $conn;
     ?>
 
 </header>
-<menu>
+<nav>
     <div class="menu-item">Les recettes</div>
     <div class="menu-item">Les articles</div>
     <div class="menu-item">Le shop</div>
     <div class="menu-item"><input type="text" placeholder="Un ingrédient..." autocomplete="off"><button>Quelle recette ?</button></div>
-</menu>
+</nav>
 
