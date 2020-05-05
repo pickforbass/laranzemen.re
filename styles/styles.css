@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Manrope:wght@200&display=swap');
 
+/* Main elements of vue :
+Titles,
+main-container
+<a>
+*/
 html, body {
     font-family: 'Manrope', sans-serif;
 }
@@ -12,10 +17,19 @@ h1, h2 {
 }
 
 
-h3, h4, h5, h6 {
+h3, h4 {
     font-family: 'Kalam', cursive;
     font-weight: 400;
-    margin-left: 20%;
+}
+
+
+h3 {
+    width : 80%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(250,219,2,0.8) 10%,rgba(250,219,2,0.8) 50%,rgba(255,255,255,0) 100%)
+    no-repeat bottom white;
+    background-size:100% 5px;
+    padding:5px 10px;
+    margin: 4vh 2vw 4vh;
 }
 
 
@@ -24,9 +38,45 @@ a {
     color: inherit;
 }
 
+a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+.list-group-item {
+    border: none;
+    background: #08af45;
+    border-radius: 20px;
+    color: #fadb02;
+    margin-bottom: 1vh;
+    font-family: 'Kalam', cursive;
+}
 
 
-/* Global elements*/
+.list-group-item:first-child, .list-group-item:last-child {
+    border-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+
+.container-fluid {
+    width:80%;
+    margin: 6vw;
+}
+
+
+.row {
+    margin-top: 5vh;
+}
+
+
+/* Parts of vue :
+    Header
+    Footer
+    Nav
+    Lists
+    Comments
+    */
 header, footer {
     display: flex;
     justify-content: space-between;
@@ -46,31 +96,9 @@ footer {
 }
 
 
-.container-fluid {
-    margin-bottom: 8vw !important;
-}
-
-
 .home-container {
     width: 80%;
     margin: 5px auto 5px auto;
-}
-
-
-.list-group-item {
-    border: none;
-    background: #08af45;
-    border-radius: 20px;
-    color: #fadb02;
-    margin-bottom: 1vh;
-    font-family: 'Kalam', cursive;
-
-}
-
-
-.list-group-item:first-child, .list-group-item:last-child {
-    border-radius: 20px !important;
-    border-top-right-radius: 20px !important;
 }
 
 
@@ -81,20 +109,32 @@ nav {
     color: #fadb02;
     font-weight: 700;
     margin-top: 0;
+    height:8vh;
 }
 
 
-menu div {
+nav div {
     margin: 15px;
 }
 
 
-.container-fluid {
-    width:80%;
-    margin: 10px auto 10px auto;
+.list-group {
+    width : 70%;
 }
 
 
+.media{
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(250,219,2,0.8) 10%,rgba(250,219,2,0.8) 50%,rgba(255,255,255,0) 100%)
+    no-repeat bottom white;
+    background-size:100% 2px;
+    padding: 10px;
+    margin-bottom: 3vh;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Set index.php*/
 
@@ -129,14 +169,17 @@ main .container {
 }
 
 #ingredients-container {
-    width: 50%;
+    width: 33%;
 }
 
-.list-group-item {
-    border: none;
-    background: #08af45;
-    border-radius: 20px;
-    color: #fadb02;
-    margin-bottom: 1vh;
+#author {
+    text-align: right;
+    width : 80%;
 }
+
+#recipe-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 

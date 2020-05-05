@@ -1,5 +1,5 @@
 <?php
-require "../elements/header.php";
+require "../parts/header.php";
 global $conn;
 
 $recipe_result = $conn->query("SELECT name, id, img FROM recipe ORDER BY RAND() LIMIT 3");
@@ -8,7 +8,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 ?>
 
 
-<main class="container-fluid">
+<main class="container-fluid mx-auto">
     <div id="incipit" class="col-sm">
         <p>
             Bienvenue les fans du rhum arrangé ! Retrouvez ici les recettes de vos digestifs préférés. Avec une
@@ -23,7 +23,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
         <?php
         while ($row = $recipe_result->fetch_assoc()){
         ?>
-        <a href="recipe.php?id=<?= $row['id'] ?>" class="col-md-4">
+        <a href="recipe.php?id=<?= $row['id'] ?>" class="col-md-3">
             <div class="recipe-content">
                 <img src="../../sources/img/<?= $row['img']?>">
                 <div>
@@ -57,6 +57,6 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 </main>
 
 <?php
-require "../elements/footer.php";
+require "../parts/footer.php";
 ?>
 
