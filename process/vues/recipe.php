@@ -7,7 +7,7 @@ $id_recipe = $_GET['id'];
 $selectrecipe = "SELECT  a.*, b.username
         FROM recipe as a
         LEFT JOIN user as b
-        ON (a.user_iduser = b.id)
+        ON (a.user_id = b.id)
         WHERE a.id = $id_recipe";
 
 $result = $conn->query($selectrecipe);

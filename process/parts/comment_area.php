@@ -8,9 +8,12 @@ if (isset($id_recipe)) {
             WHERE recipe_id = $id_recipe
             ORDER BY a.date DESC";
 } else if (isset($id_article)) {
-    $qry = "SELECT * 
-            FROM comment_article
-            WHERE article_id = $id_article";
+    $qry = "SELECT a.*, u.username 
+            FROM comment_article as a
+            INNER JOIN user as u
+            ON a.user_id = u.id
+            WHERE article_id = $id_article
+            ORDER BY a.date DESC";
 }
 
 $comments = $conn->query($qry);

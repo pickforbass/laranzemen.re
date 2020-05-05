@@ -60,8 +60,7 @@ a:hover {
 
 
 .container-fluid {
-    width:80%;
-    margin: 6vw;
+    margin-top: 2vw ;
 }
 
 
@@ -182,4 +181,8 @@ main .container {
     justify-content: space-between;
 }
 
+/* Set article.php*/
 
+.article-img {
+    object-fit: scale-down;
+}
