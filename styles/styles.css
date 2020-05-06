@@ -136,6 +136,7 @@ nav div {
     justify-content: space-between;
 }
 
+
 /* Set index.php*/
 main .container {
     width: 90%;
@@ -201,7 +202,8 @@ main .container {
 /* Set articles.php & recipes.php*/
 .card-container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding: 2rem;
 }
 
@@ -209,8 +211,8 @@ main .container {
 .card {
     width: 18rem;
     margin: 1rem;
-    box-shadow: 8px 2px 15px -5px rgba(170,170,170,1);
-]}
+    box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.75);
+}
 
 
 .card-img-top {

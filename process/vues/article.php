@@ -10,6 +10,7 @@ $qry = "SELECT  a.*, u.username
         WHERE a.id = $id_article";
 $result = $conn->query($qry);
 $article = $result->fetch_assoc();
+$date = date('d-m-Y', strtotime($article['date']));
 
 ?>
 
@@ -21,8 +22,7 @@ $article = $result->fetch_assoc();
 
     <div class="article-infos">
         <h3 class="article-title"><?= $article['title']?></h3>
-        <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?></span></small></p>
-        <p id="date" class="text-right 8-col-sm"><small>par <span><?= $article['date'] ?></span></small></p>
+        <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?> | <?= $date ?></span></small></p>
     </div>
 
     <p><?= nl2br($article['content']) ?></p>

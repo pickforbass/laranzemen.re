@@ -6,6 +6,9 @@ $res = $conn->query("SELECT id, title, img FROM article ORDER BY title ASC");
 
 ?>
 
+<h3> LE BLOG</h3>
+
+
 <main class="card-container w-100">
 
     <?php while($article = $res->fetch_assoc()){ ?>
