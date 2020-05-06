@@ -14,15 +14,9 @@ $article = $result->fetch_assoc();
 ?>
 
 <main class="container-fluid">
-    <img src="../../sources/img/<?= $article['img']?>" alt="<?= $article['title']?>" class="article-img">
-
-
-
-
-
-
-
-
+    <div class="article-img w-100">
+        <img src="../../sources/img/<?= $article['img']?>" alt="<?= $article['title']?>">
+    </div>
     <?= require"../parts/comment_area.php"; ?>
 </main>
 

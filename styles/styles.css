@@ -182,7 +182,11 @@ main .container {
 }
 
 /* Set article.php*/
-
 .article-img {
-    object-fit: scale-down;
+    height: 20vh;
+}
+
+
+.article-img img {
+    object-fit: cover;
 }
