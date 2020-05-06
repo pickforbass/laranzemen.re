@@ -14,15 +14,25 @@ $article = $result->fetch_assoc();
 ?>
 
 <main class="container-fluid">
+
     <div class="article-img w-100">
         <img src="../../sources/img/<?= $article['img']?>" alt="<?= $article['title']?>">
     </div>
+
+    <div class="article-infos">
+        <h3 class="article-title"><?= $article['title']?></h3>
+        <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?></span></small></p>
+        <p id="date" class="text-right 8-col-sm"><small>par <span><?= $article['date'] ?></span></small></p>
+    </div>
+
+    <p><?= nl2br($article['content']) ?></p>
+
     <?= require"../parts/comment_area.php"; ?>
+
 </main>
 
 
 <?php
-
 require "../parts/footer.php";
 ?>
 

@@ -130,13 +130,13 @@ nav div {
     margin-bottom: 3vh;
 }
 
+
 .comment-info {
     display: flex;
     justify-content: space-between;
 }
 
 /* Set index.php*/
-
 main .container {
     width: 90%;
     margin: 2vw auto 5vw auto;
@@ -146,12 +146,14 @@ main .container {
     padding: 0;
 }
 
+
 .container div {
     background-color: white;
     text-align: center;
     margin: 2%;
     padding: 0;
 }
+
 
 .container div img {
     margin-top : 1vw;
@@ -161,29 +163,33 @@ main .container {
 }
 
 /* Set recipe.php */
-
 .img-recipe {
     width: 20vw;
     height: 20vw;
 }
 
+
 #ingredients-container {
     width: 33%;
 }
+
 
 #author {
     text-align: right;
     width : 80%;
 }
 
+
 #recipe-info {
     display: flex;
     justify-content: space-between;
 }
 
+
 /* Set article.php*/
 .article-img {
     height: 20vh;
+    overflow: hidden;
 }
 
 
