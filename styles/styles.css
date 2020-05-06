@@ -59,6 +59,20 @@ a:hover {
 }
 
 
+.btn-primary {
+    background: #fadb02;
+    border-radius: 15px;
+}
+
+
+.btn-primary {
+    background: transparent;
+    border-radius: 15px;
+    border: #fadb02 2px solid;
+    margin: 5px;
+}
+
+
 .container-fluid {
     margin-top: 2vw ;
 }
@@ -119,12 +133,15 @@ nav {
     color: #fadb02;
     font-weight: 700;
     margin-top: 0;
-    height:8vh;
+    padding: 5px;
+    height: 10vh;
 }
 
 
-nav div {
+.menu-item {
     margin: 15px;
+    height: 5vh;
+    vertical-align: middle;
 }
 
 

@@ -12,7 +12,7 @@ global $conn;
     <title>l'aranzemen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1e527daaa5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../styles/styles.css">
+     <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 <body>
 <header>
@@ -35,6 +35,6 @@ global $conn;
     <div class="menu-item">Les recettes</div>
     <div class="menu-item">Les articles</div>
     <div class="menu-item">Le shop</div>
-    <div class="menu-item"><input type="text" placeholder="Un ingrédient..." autocomplete="off"><button>Quelle recette ?</button></div>
+    <div class="menu-item"><input type="text" placeholder="Un ingrédient..." autocomplete="off"><button class="btn btn-primary">Quelle recette ?</button></div>
 </nav>
 
