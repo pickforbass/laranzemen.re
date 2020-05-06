@@ -1,10 +1,24 @@
 <?php
-require "../elements/header.php";
+require "../parts/header.php";
 global $conn;
 
-$id_art = $_GET['id'];
-$res = $conn->query("SELECT * FROM article WHERE id = $id_art");
+$res = $conn->query("SELECT id, title, img FROM article ORDER BY title ASC");
 
 ?>
 
+<main class="card-container w-100">
+
+    <?php while($article = $res->fetch_assoc()){ ?>
+        <div class="card">
+            <a href="./article.php?id=<?= $article['id'] ?>">
+                <img class="card-img-top" src="../../sources/img/<?= $article['img'] ?>" alt="<?= $article['title'] ?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $article['title'] ?></h5>
+                </div>
+            </a>
+        </div>
+
+    <?php } ?>
+
+</main>
 

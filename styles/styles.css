@@ -188,11 +188,32 @@ main .container {
 
 /* Set article.php*/
 .article-img {
-    height: 20vh;
     overflow: hidden;
 }
 
 
 .article-img img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+
+/* Set articles.php & recipes.php*/
+.card-container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2rem;
+}
+
+
+.card {
+    width: 18rem;
+    margin: 1rem;
+    box-shadow: 8px 2px 15px -5px rgba(170,170,170,1);
+]}
+
+
+.card-img-top {
+    height: 8rem;
     object-fit: cover;
 }
