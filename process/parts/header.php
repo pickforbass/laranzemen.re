@@ -31,10 +31,20 @@ global $conn;
     ?>
 
 </header>
-<nav>
-    <div class="menu-item">Les recettes</div>
-    <div class="menu-item">Les articles</div>
-    <div class="menu-item">Le shop</div>
-    <div class="menu-item"><input type="text" placeholder="Un ingrédient..." autocomplete="off"><button class="btn btn-primary">Quelle recette ?</button></div>
-</nav>
+<ul class="nav">
+    <li class="nav-item nav-link align-middle">
+        <a href="recipes.php">
+        Les recettes
+        </a>
+    </li>
+    <li class="nav-item nav-link align-middle">
+        <a href="articles.php">
+        Les articles
+        </a>
+    </li>
+    <li class="nav-item nav-link align-middle">
+        <input type="text" placeholder="Un ingrédient..." autocomplete="off" class="align-middle">
+        <button class="btn btn-primary align-middle">Quelle recette ?</button>
+    </li>
+</ul>
 

@@ -37,7 +37,7 @@ $recipe = $result->fetch_assoc();
 
     <div class="row ">
         <h3>La recette</h3>
-        <p><?= nl2br($recipe['content']) ?></p>
+        <p class="container"><?= nl2br($recipe['content']) ?></p>
     </div>
 
     <?= require"../parts/comment_area.php"; ?>

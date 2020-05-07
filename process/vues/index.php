@@ -10,7 +10,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 
 <main class="container-fluid mx-auto">
     <div id="incipit" class="col-sm">
-        <p>
+        <p class="container">
             Bienvenue les fans du rhum arrangé ! Retrouvez ici les recettes de vos digestifs préférés. Avec une
             infinité de combinaisons possibles, vous n'avez pas fini de tester et déguster tout cela.</br>
             Le rhum arrangé est la maturation de plusieurs fruits ou épices dans un rhum agricole blanc.
@@ -19,7 +19,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
     </div>
 
     <h3>Les recettes du moment</h3>
-    <div id="recipe-show" class="container col-md">
+    <div id="recipe-show" class="container col-md d-flex justify-content-around bg-light">
         <?php
         while ($row = $recipe_result->fetch_assoc()){
         ?>
@@ -35,7 +35,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
     </div>
 
     <h3>What's up blog ?!</h3>
-    <div class="container index-content col-md">
+    <div class=" container col-md d-flex justify-content-around bg-light">
         <?php
         while ($row = $article_result->fetch_assoc()){
             ?>

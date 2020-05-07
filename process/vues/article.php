@@ -16,18 +16,23 @@ $date = date('d-m-Y', strtotime($article['date']));
 
 <main class="container-fluid">
 
-    <div class="article-img w-100">
-        <img src="../../sources/img/<?= $article['img']?>" alt="<?= $article['title']?>">
+    <div class="row">
+
+        <div class="article-img w-100">
+            <img src="../../sources/img/<?= $article['img']?>" alt="<?= $article['title']?>">
+        </div>
+
+        <div class="article-infos">
+            <h3 class="article-title"><?= $article['title']?></h3>
+            <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?> | <?= $date ?></span></small></p>
+        </div>
+
+        <p class="container"><?= nl2br($article['content']) ?></p>
     </div>
 
-    <div class="article-infos">
-        <h3 class="article-title"><?= $article['title']?></h3>
-        <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?> | <?= $date ?></span></small></p>
+    <div class="row">
+        <?= require"../parts/comment_area.php"; ?>
     </div>
-
-    <p><?= nl2br($article['content']) ?></p>
-
-    <?= require"../parts/comment_area.php"; ?>
 
 </main>
 
