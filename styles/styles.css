@@ -108,9 +108,6 @@ main {
 }
 
 
-
-
-
 /* Parts of vue :
     Header
     Footer
@@ -118,26 +115,19 @@ main {
     Lists
     Comments
     */
-header, footer {
-    display: flex;
-    justify-content: space-between;
+header{
     background-color: #08af45;
-    padding-bottom: 1rem;
 }
 
 
 .header-content {
-    margin: 5px;
     font-family: 'Kalam', cursive;
 }
 
 
 footer {
-    background: white;
-    color: #fadb02;
-    flex-direction: column;
-    margin-top: 4rem;
-    padding: 1rem;
+    color: #08af45;
+
 }
 
 
@@ -225,18 +215,6 @@ main .container {
 
 #ingredients-container {
     width: 33%;
-}
-
-
-#author {
-    text-align: right;
-    width : 80%;
-}
-
-
-#recipe-info {
-    display: flex;
-    justify-content: space-between;
 }
 
 

@@ -16,8 +16,8 @@ global $conn;
      <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 <body>
-<header>
-    <div id="logo" class="header-content">
+<header class="d-flex justify-content-between p-1">
+    <div id="logo" class="header-content p-1">
         <a href="index.php">
         <img src="" alt="">
         <div>
