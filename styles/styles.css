@@ -90,6 +90,25 @@ main {
 }
 
 
+.btn-primary:hover {
+    background: #fadb02;
+    border: 2px solid transparent;
+    color: black;
+}
+
+
+.btn-outline-secondary {
+    color: black;
+    border-color: #fadb02;
+}
+
+.btn-outline-secondary:hover {
+    border: none;
+    background: #fadb02;
+}
+
+
+
 
 
 /* Parts of vue :
@@ -126,8 +145,6 @@ footer div {
     width: 25%;
     font-size: 2rem;
     margin: 1rem auto auto auto;
-    display: flex;
-    justify-content: space-around;
 }
 
 
@@ -138,7 +155,6 @@ footer div {
 
 
 .nav {
-    justify-content: space-around;
     background-color: black;
     color: #fadb02;
     font-weight: 700;

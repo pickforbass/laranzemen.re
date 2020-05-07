@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "connDB.php";
 global $conn;
 ?>
@@ -31,7 +32,7 @@ global $conn;
     ?>
 
 </header>
-<ul class="nav">
+<ul class="nav d-flex justify-content-end">
     <li class="nav-item nav-link align-middle">
         <a href="recipes.php">
         Les recettes
@@ -42,7 +43,7 @@ global $conn;
         Les articles
         </a>
     </li>
-    <li class="nav-item nav-link align-middle">
+    <li class="align-middle">
         <input type="text" placeholder="Un ingrédient..." autocomplete="off" class="align-middle">
         <button class="btn btn-primary align-middle">Quelle recette ?</button>
     </li>
