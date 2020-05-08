@@ -41,7 +41,7 @@
 <!---->
 <?php //} else if (isset($_POST['pwd']) && isset($_POST['login'])) { ?>
 
-    <div id="login-area" class="header-content">
+    <div>
         <form action= "#" method= "post">
             <input type="text" id="login" name="login">
             <input type="password" id="pwd" name="pwd">

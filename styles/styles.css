@@ -27,13 +27,10 @@ h3, h4 {
 
 
 h3 {
-    width : 80%;
     background:
     linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(250,219,2,0.8) 10%,rgba(250,219,2,0.8) 50%,rgba(255,255,255,0) 100%)
     no-repeat bottom white;
     background-size:100% 5px;
-    padding:5px 10px;
-    margin: 4vh 2vw 4vh;
 }
 
 
@@ -55,17 +52,11 @@ a:hover {
 }
 
 
-main {
-    padding: 2vh 0 5vh 0;
-}
-
-
 .list-group-item {
     border: none;
     background: #08af45;
     border-radius: 20px;
     color: #fadb02;
-    margin-bottom: 1vh;
     font-family: 'Kalam', cursive;
 }
 
@@ -73,12 +64,6 @@ main {
 .list-group-item:first-child, .list-group-item:last-child {
     border-radius: 20px !important;
     border-top-right-radius: 20px !important;
-}
-
-
-.btn-primary {
-    background: #fadb02;
-    border-radius: 15px;
 }
 
 
@@ -117,54 +102,24 @@ main {
     */
 header{
     background-color: #08af45;
-}
-
-
-.header-content {
     font-family: 'Kalam', cursive;
 }
 
 
 footer {
     color: #08af45;
-
-}
-
-
-footer div {
-    width: 25%;
-    font-size: 2rem;
-    margin: 1rem auto auto auto;
-}
-
-
-.home-container {
-    width: 80%;
-    margin: 5px auto 5px auto;
 }
 
 
 .nav {
-    background-color: black;
     color: #fadb02;
     font-weight: 700;
-    padding: 0;
-}
-
-
-.nav-item {
-    vertical-align: middle;
 }
 
 
 .nav-item:hover {
     background: #fadb02;
     color: black;
-}
-
-
-.list-group {
-    width : 70%;
 }
 
 
@@ -180,41 +135,6 @@ footer div {
 .comment-info {
     display: flex;
     justify-content: space-between;
-}
-
-
-/* Set index.php*/
-main .container {
-    margin: 2vw auto 5vw auto;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-}
-
-
-.container div {
-    background-color: white;
-    margin: 2%;
-    padding: 0;
-}
-
-
-.container div img {
-    margin-top : 1vw;
-    height: 240px;
-    width: 240px;
-    object-fit: cover;
-}
-
-/* Set recipe.php */
-.img-recipe {
-    width: 20vw;
-    height: 20vw;
-}
-
-
-#ingredients-container {
-    width: 33%;
 }
 
 
@@ -240,8 +160,6 @@ main .container {
 
 
 .card {
-    width: 18rem;
-    margin: 1rem;
     box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.75);
 }
 

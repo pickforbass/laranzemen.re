@@ -22,7 +22,7 @@ $comments = $conn->query($qry);
 <div class="row">
     <div class="col-md-10 mx-auto">
         <div class="page-header">
-            <h3>Commentaires </h3>
+            <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">Commentaires </h3>
         </div>
 
         <div class="comments-list">

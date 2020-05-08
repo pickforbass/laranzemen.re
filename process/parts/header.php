@@ -16,8 +16,8 @@ global $conn;
      <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 <body>
-<header class="d-flex justify-content-between p-1">
-    <div id="logo" class="header-content p-1">
+<header class="d-flex justify-content-between p-3">
+    <div>
         <a href="index.php">
         <img src="" alt="">
         <div>
@@ -32,7 +32,8 @@ global $conn;
     ?>
 
 </header>
-<ul class="nav d-flex justify-content-end">
+<nav>
+<ul class="nav d-flex justify-content-end pr-3 bg-dark">
     <li class="nav-item nav-link align-middle">
         <a href="recipes.php">
         Les recettes
@@ -44,8 +45,9 @@ global $conn;
         </a>
     </li>
     <li class="align-middle">
-        <input type="text" placeholder="Un ingrédient..." autocomplete="off" class="align-middle">
+        <input type="text" placeholder="Un ingrédient..." autocomplete="off" class="align-middle pl-1">
         <button class="btn btn-primary align-middle">Quelle recette ?</button>
     </li>
 </ul>
+</nav>
 

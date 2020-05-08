@@ -15,13 +15,13 @@ $recipe = $result->fetch_assoc();
 
 ?>
 
-<main class="container-fluid mx-auto">
+<main class="container-fluid pt-3 pb-5">
     <div class="row">
-        <h3 class="col-sm-10"><?= $recipe['name'] ?></h3>
+        <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5"><?= $recipe['name'] ?></h3>
         <p id="author" class="text-right col-sm-10">par <span><?= $recipe['username'] ?></span></p>
 
         <div class="container d-flex justify-content-between">
-            <ul id="ingredients-container" class="list-group 6-col-sm">
+            <ul class="list-group col-sm-4 pr-3">
                 <li class="list-group-item mb-2">1l de Rhum blanc</li>
                 <li class="list-group-item mb-2">2 à 3g de Feuilles de Cannelle</li>
                 <li class="list-group-item mb-2">4 à 5 Feuilles de Faham</li>
@@ -29,14 +29,14 @@ $recipe = $result->fetch_assoc();
                 <li class="list-group-item mb-2">1 gousse de Vanille de qualité</li>
             </ul>
 
-            <div class="4-col-sm pr-5">
-                <img src="../../sources/img/<?= $recipe['img'] ?>" class="img-recipe" alt="<?= $recipe['name']?>">
+            <div class="col-sm-4 pr-5">
+                <img src="../../sources/img/<?= $recipe['img'] ?>" class="col-sm" alt="<?= $recipe['name']?>">
             </div>
         </div>
     </div>
 
     <div class="row ">
-        <h3>La recette</h3>
+        <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">La recette</h3>
         <p class="container"><?= nl2br($recipe['content']) ?></p>
     </div>
 

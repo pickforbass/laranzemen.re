@@ -8,8 +8,8 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 ?>
 
 
-<main class="container-fluid mx-auto">
-    <div id="incipit" class="col-sm">
+<main class="container-fluid mt-3">
+    <div class="col-sm-10 mx-auto">
         <p class="container">
             Bienvenue les fans du rhum arrangé ! Retrouvez ici les recettes de vos digestifs préférés. Avec une
             infinité de combinaisons possibles, vous n'avez pas fini de tester et déguster tout cela.</br>
@@ -18,42 +18,37 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
         </p>
     </div>
 
-    <h3>Les recettes du moment</h3>
-    <div id="recipe-show" class="container col-md d-flex justify-content-around bg-light">
+    <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">Les recettes du moment</h3>
+    <div class="container col-md-10 d-flex justify-content-around bg-light p-0 mb-5 mx-auto">
         <?php
         while ($row = $recipe_result->fetch_assoc()){
         ?>
-        <a href="recipe.php?id=<?= $row['id'] ?>" class="col-md-3">
-            <div class="recipe-content">
-                <img src="../../sources/img/<?= $row['img']?>">
-                <div>
-                    <p><?= $row['name'] ?></p>
+        <a href="recipe.php?id=<?= $row['id'] ?>" class="col-md-4">
+            <div class="card m-4 bg-white">
+                <img src="../../sources/img/<?= $row['img']?>" class="card-img">
+                <div class="card-body mt-1">
+                    <h4 class="text-center"><?= $row['name'] ?></h4>
                 </div>
             </div>
         </a>
         <?php }; ?>
     </div>
 
-    <h3>What's up blog ?!</h3>
-    <div class=" container col-md d-flex justify-content-around bg-light">
+    <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">What's up blog ?!</h3>
+    <div class=" container col-md-10 d-flex justify-content-around bg-light">
         <?php
         while ($row = $article_result->fetch_assoc()){
             ?>
             <a href="article.php?id=<?= $row['id'] ?>" class="col-md-4">
-                <div class="article-content">
-                    <img src="../../sources/img/<?= $row['img'] ?>" height="200px" width="200px">
-                    <div class="preview">
-                        <p><?= $row['title'] ?></p>
+                <div class="card m-4 bg-white"">
+                    <img src="../../sources/img/<?= $row['img'] ?>" class="card-img">
+                    <div class="card-body mt-1">
+                        <h4 class="text-center"><?= $row['title'] ?></h4>
                     </div>
                 </div>
             </a>
         <?php } ?>
     </div>
-
-
-
-
-
 </main>
 
 <?php
