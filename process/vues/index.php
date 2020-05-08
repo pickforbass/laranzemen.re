@@ -8,7 +8,7 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 ?>
 
 
-<main class="container-fluid mt-3">
+<main class="container-fluid mt-5 row">
     <div class="col-sm-10 mx-auto">
         <p class="container">
             Bienvenue les fans du rhum arrangé ! Retrouvez ici les recettes de vos digestifs préférés. Avec une
@@ -18,8 +18,8 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
         </p>
     </div>
 
-    <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">Les recettes du moment</h3>
-    <div class="container col-md-10 d-flex justify-content-around bg-light p-0 mb-5 mx-auto">
+    <h3 class="col-sm-10 pt-1 pb-2 ml-5 mt-5 mb-5">Les recettes du moment</h3>
+    <div class="container col-md-10 d-flex justify-content-around p-0 mb-5 mx-auto bg-light">
         <?php
         while ($row = $recipe_result->fetch_assoc()){
         ?>
