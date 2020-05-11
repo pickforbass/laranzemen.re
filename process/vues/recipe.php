@@ -29,26 +29,23 @@ $res2 = $conn->query($getIngredients);
         <div class="container d-flex justify-content-between">
             <ul class="list-group col-sm-4 pr-3">
                 <li class="list-group-item mb-2">
-                    <button id='minus'>
-                        <svg class="bi bi-caret-left-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-caret-left-fill" id='minus' width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z"/>
                         </svg>
-                    </button>
                     <span id="liter">1</span>
-                    <button id='plus'>
-                        <svg class="bi bi-caret-right-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-caret-right-fill" id='plus' width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 011.659-.753l5.48 4.796a1 1 0 010 1.506z"/>
                         </svg>
-                    </button>
                     <span> L de rhum blanc</span>
                 </li>
 
                 <?php while ($ingredient = $res2->fetch_assoc()){ ?>
                 <li class="list-group-item mb-2">
-                    <span data-quantity="<?= $ingredient['qty'] ?>" data-unity="<?= $ingredient['unity'] ?>"><?= $ingredient['qty'] ?> <?= $ingredient['unity'] ?></span>
-                    <span> de <?= $ingredient['name'] ?></span>
+                    <span data-qty="<?= $ingredient['qty'] ?>"></span>
+                    <span data-unit="<?= $ingredient['unity'] ?>"></span>
+                    <span data-prop="de"> de </span>
+                    <span data-name="<?= $ingredient['name'] ?>"><?= $ingredient['name']?></span>
                 </li>
-
                 <?php } ?>
             </ul>
 

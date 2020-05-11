@@ -1,30 +1,33 @@
-/*
-let plusbutton = document.getElementById('plus');
-let minusbutton = document.getElementById('minus');
+let plusButton = document.getElementById('plus');
+let minusButton = document.getElementById('minus');
 let liter = document.getElementById('liter');
 
 
-function UpdateLiter(cont){
-    liter.innerHTML= parseInt(cont);
-    //console.log(result);
+//Event Listeners functions
+function add(){
+    liter.innerHTML = parseInt(liter.innerHTML) + 1;
+    updateQty();
+
 }
 
-function add (){
-    result = parseInt(liter.innerHTML) + 1;
-    UpdateLiter(result);
-}
-
-function less (){
+function less(){
     if (parseInt(liter.innerHTML) > 1){
-        result = parseInt(liter.innerHTML) - 1;
-        UpdateLiter(result);
+        liter.innerHTML = parseInt(liter.innerHTML) - 1;
+        updateQty();
+
     }
 }
 
-plusbutton.addEventListener("click", add());
-minusbutton.addEventListener("click", less());
-UpdateLiter("1");
+// Update quantities
+function updateQty()
+{
+    for (let data of document.querySelectorAll('[data-qty]')) {
+        let qty = parseInt(data.dataset.qty)*parseInt(liter.innerHTML);
+        data.innerHTML = qty;
+    }
 
-let AJAXRequest = new XMLHttpRequest();
+}
 
-*/
+plusButton.addEventListener("click", add);
+minusButton.addEventListener("click", less);
+updateQty();
