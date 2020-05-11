@@ -30,7 +30,19 @@ contient le footer et les balises fermantes
 
 
 ###A faire
-Maquette
-Rajouter la notation sur les recettes.
-Ajouter la vue de l'annuaire des recettes et des articles
-idrecette -> id
+Rajouter la notation sur les recettes
+
+###Liste des mesures
+u
+gr
+kg
+cc
+cs
+ml
+cl
+dl
+l
+gts
+
+
+

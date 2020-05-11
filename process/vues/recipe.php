@@ -4,15 +4,21 @@ require "../parts/header.php";
 global $conn;
 
 $id_recipe = $_GET['id'];
-$selectrecipe = "SELECT  a.*, b.username
+$selectRecipe = "SELECT  a.*, b.username
         FROM recipe as a
         LEFT JOIN user as b
         ON (a.user_id = b.id)
-        WHERE a.id = $id_recipe";
-
-$result = $conn->query($selectrecipe);
+        WHERE a.id = 2";
+$result = $conn->query($selectRecipe);
 $recipe = $result->fetch_assoc();
 
+$getIngredients = "SELECT i.name, q.qty, q.unity
+                 FROM ingredient as i
+                 INNER JOIN  ingr_qty as q
+                 ON q.ingredient_id = i.id
+                 WHERE q.recipe_id = 2";
+
+$res2 = $conn->query($getIngredients);
 ?>
 
 <main class="container-fluid pt-3 pb-5">
@@ -22,11 +28,27 @@ $recipe = $result->fetch_assoc();
 
         <div class="container d-flex justify-content-between">
             <ul class="list-group col-sm-4 pr-3">
-                <li class="list-group-item mb-2">1l de Rhum blanc</li>
-                <li class="list-group-item mb-2">2 à 3g de Feuilles de Cannelle</li>
-                <li class="list-group-item mb-2">4 à 5 Feuilles de Faham</li>
-                <li class="list-group-item mb-2">1 bâton de Cannelle</li>
-                <li class="list-group-item mb-2">1 gousse de Vanille de qualité</li>
+                <li class="list-group-item mb-2">
+                    <button id='minus'>
+                        <svg class="bi bi-caret-left-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z"/>
+                        </svg>
+                    </button>
+                    <span id="liter"></span>
+                    <button id='plus'>
+                        <svg class="bi bi-caret-right-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 011.659-.753l5.48 4.796a1 1 0 010 1.506z"/>
+                        </svg>
+                    </button>
+                    <span> L de rhum blanc</span>
+                </li>
+
+                <?php while ($ingredient = $res2->fetch_assoc()){ ?>
+                <li class="list-group-item mb-2">
+                    <span><?= $ingredient['qty'] ?> <?= $ingredient['unity'] ?> de <?= $ingredient['name'] ?></span>
+                </li>
+
+                <?php } ?>
             </ul>
 
             <div class="col-sm-4 pr-5">
