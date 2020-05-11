@@ -12,19 +12,16 @@ html, body {
     font-family: 'Manrope', sans-serif;
 }
 
-
 h1, h2 {
     font-family: 'Kalam', cursive;
     font-weight: 700;
     color: #fadb02;
 }
 
-
 h3, h4 {
     font-family: 'Kalam', cursive;
     font-weight: 400;
 }
-
 
 h3 {
     background:
@@ -33,12 +30,10 @@ h3 {
     background-size: 100% 5px;
 }
 
-
 a {
     text-decoration: inherit;
     color: inherit;
 }
-
 
 a:hover {
     text-decoration: none;
@@ -51,7 +46,6 @@ a:hover {
     min-height: 30rem;
 }
 
-
 .list-group-item {
     border: none;
     background: #08af45;
@@ -61,11 +55,9 @@ a:hover {
     min-height: 1.1em;
 }
 
-
 .list-group-item:first-child, .list-group-item:last-child {
     border-radius: 20px 0 20px 0 !important;
 }
-
 
 .btn-primary {
     background: transparent;
@@ -73,7 +65,6 @@ a:hover {
     border: #fadb02 2px solid;
     margin: 5px;
 }
-
 
 .btn-primary:hover {
     background: #fadb02;
@@ -88,7 +79,6 @@ btn:focus, .btn-primary:focus{
     scale: 0.9;
 }
 
-
 .btn-outline-secondary {
     color: black;
     border-color: #fadb02;
@@ -98,7 +88,6 @@ btn:focus, .btn-primary:focus{
     border: none;
     background: #fadb02;
 }
-
 
 /* Parts of vue :
     Header

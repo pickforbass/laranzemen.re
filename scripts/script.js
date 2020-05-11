@@ -1,4 +1,4 @@
-
+/*
 let plusbutton = document.getElementById('plus');
 let minusbutton = document.getElementById('minus');
 let liter = document.getElementById('liter');
@@ -6,7 +6,7 @@ let liter = document.getElementById('liter');
 
 function UpdateLiter(cont){
     liter.innerHTML= parseInt(cont);
-    console.log(result);
+    //console.log(result);
 }
 
 function add (){
@@ -25,3 +25,6 @@ plusbutton.addEventListener("click", add());
 minusbutton.addEventListener("click", less());
 UpdateLiter("1");
 
+let AJAXRequest = new XMLHttpRequest();
+
+*/
