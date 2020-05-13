@@ -9,6 +9,5 @@
         <p class="text-right text-dark"><small>Made with sweat tears and self-confidence by QF - 2020</small></p>
     </footer>
 
-<!--<script src="../../scripts/tests.js"></script>-->
 </body>
 </html>

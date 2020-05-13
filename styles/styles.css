@@ -37,7 +37,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: inherit;
     cursor: default;
     font-weight: 700;
 }
@@ -69,7 +69,7 @@ a:hover {
 .btn-primary:hover {
     background: #fadb02;
     border: 2px solid transparent;
-    color: black;
+    color: inherit;
 }
 
 btn:focus, .btn-primary:focus{
@@ -80,7 +80,7 @@ btn:focus, .btn-primary:focus{
 }
 
 .btn-outline-secondary {
-    color: black;
+    color: inherit;
     border-color: #fadb02;
 }
 
@@ -167,4 +167,40 @@ footer {
 
 svg {
     color: #fadb02;
+    width: inherit;
+}
+
+/*dialog overlay*/
+.modal-window {
+    z-index: 100;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow-y: scroll;
+    background: rgba(10, 18, 15, 0.8);}
+
+/*dialog box*/
+.modal-box {
+    top: 0;
+    bottom:0;
+    opacity: 100%;
+}
+
+/*hidden and showed dialog*/
+.modal-window[aria-hidden="true"] {
+    display: none;
+}
+
+.modal-window[aria-hidden="false"] {
+    display: inline-block;
+}
+
+.close-btn {
+    top: 0;
+    right: 0;
+}
+
+.close-btn svg {
+width : 1.5em;
 }

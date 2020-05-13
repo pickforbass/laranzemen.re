@@ -41,10 +41,8 @@ $res2 = $conn->query($getIngredients);
 
                 <?php while ($ingredient = $res2->fetch_assoc()){ ?>
                 <li class="list-group-item mb-2">
-                    <span data-qty="<?= $ingredient['qty'] ?>"></span>
-                    <span data-unit="<?= $ingredient['unity'] ?>"></span>
-                    <span data-prop="de"> de </span>
-                    <span data-name="<?= $ingredient['name'] ?>"><?= $ingredient['name']?></span>
+                    <span class='ingredient'data-qty="<?= $ingredient['qty'] ?>" data-unit="<?= $ingredient['unity'] ?>" data-prop="de" data-name="<?= $ingredient['name'] ?>"></span>
+                    <span><?= $ingredient['name']?></span>
                 </li>
                 <?php } ?>
             </ul>
@@ -64,6 +62,7 @@ $res2 = $conn->query($getIngredients);
 
 </main>
 
+<script src="../../scripts/script.js"></script>
 <?php
 require "../parts/footer.php";
 ?>

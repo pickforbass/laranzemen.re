@@ -34,16 +34,16 @@ Rajouter la notation sur les recettes
 
 ###Liste des mesures
 u
-gts
+cc
+cs
 gr
-l
+cl
 
 kg
 cc
 cs
-ml
 cl
-dl
+l
 
 
 
