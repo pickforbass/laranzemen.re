@@ -209,3 +209,9 @@ width : 1.5em;
     border: 3px solid #343a40;
     border-radius: 3rem;
 }
+
+.input-group-text {
+    background: #fadb02;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

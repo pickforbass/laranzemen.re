@@ -65,25 +65,11 @@ Ajouter l'input pour le commentaire
 gérer le calculateur
 alléger la requete
 
-##### articles.php
-
-OK
-
-##### index.php
-
-OK
 
 ##### lostpd.php
 
 tout
 
-##### article.php
-
-ok
-
-##### recipes.php
-
-OK
 
 ##### shop.php
 
@@ -93,7 +79,5 @@ on oublie
 
 finir les fenetres modal
 créer les requetes sql (doit d'abord régler le bug de login.php)
-
-
 
 
