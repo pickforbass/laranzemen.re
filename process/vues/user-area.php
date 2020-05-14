@@ -46,14 +46,14 @@ global $conn;
                         </div>
                     </div>
                 </div>
+
                 <div id="add-recipe"
                      role="dialog"
                      aria-modal="true"
                      aria-hidden="true"
                      tabindex="-1"
                      class="modal-window d-flex justify-content-center position-fixed p-5">
-
-                    <div role="document" class="modal-box col-sm-8 mx-auto position-fixed p-3 mt-3 bg-white border border-dark rounded round-lg">
+                    <div role="document" class="modal-box col-sm-7 mx-auto position-fixed p-5 mt-3 bg-white border border-dark rounded round-lg">
                         <h2 id="dialog-title">Ajouter une recette</h2>
                     <form action="" method="post">
                         <p>
@@ -75,6 +75,7 @@ global $conn;
                         </svg>
                     </button>
                 </div>
+
             </div>
 
             <div class="container">

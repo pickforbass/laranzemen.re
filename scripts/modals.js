@@ -2,11 +2,6 @@
 let buttons = document.querySelectorAll('[aria-haspopup="dialog"]');
 const mainPage = document.querySelector('.page');
 
-if (mainPage) {
-    console.log("ok");
-} else {
-    console.log('pas ok');
-}
 
 buttons.forEach((button) => {
     let window = document.getElementById(button.getAttribute('aria-controls'));

@@ -1,5 +1,10 @@
 # Notes et idées
 
+### Github
+
+https://pickforbass.github.io/laranzemen.re/
+
+
 ### Pour stocker les images en les renommant :
 - créer un tableau vierge
 - lancer un math random *100000 pour avoir un nombre assez conséquent
@@ -27,24 +32,67 @@ crée la connection à la DB et le canevas des requêtes.
 #### footer.php
 contient le footer et les balises fermantes
 
+###Liste des mesures
 
+##### pour data-
+
+- u
+- cc
+- cs
+- gr
+- cl
+
+##### en plus pour recipe.php
+- kg
+- cc
+- cs
+- cl
+- l
 
 ###A faire
-Rajouter la notation sur les recettes
 
-###Liste des mesures
-u
-cc
-cs
-gr
-cl
 
-kg
-cc
-cs
-cl
-l
+##### Login.php
 
+Régler bug
+
+##### comment-area.php
+
+Ajouter l'input pour le commentaire
+
+##### recipe.php
+
+gérer le calculateur
+alléger la requete
+
+##### articles.php
+
+OK
+
+##### index.php
+
+OK
+
+##### lostpd.php
+
+tout
+
+##### article.php
+
+ok
+
+##### recipes.php
+
+OK
+
+##### shop.php
+
+on oublie
+
+##### user-area.php
+
+finir les fenetres modal
+créer les requetes sql (doit d'abord régler le bug de login.php)
 
 
 
