@@ -19,6 +19,7 @@ function displayConnexion() { ?>
     </div>
 <?php }
 
+
 function displayHello (array $arr) { ?>
     <span class="float-right pr-2">
         <a href="user-area.php?id=<?= $arr['id'] ?>" >
@@ -26,6 +27,7 @@ function displayHello (array $arr) { ?>
         </a>
     </span>
 <?php }
+
 
 function GetUserByName ($name) {
     global $conn;
@@ -36,6 +38,7 @@ function GetUserByName ($name) {
     return $result->fetch_assoc();
 }
 
+
 function GetUserByID ($id) {
     global $conn;
     $qry = "SELECT *
@@ -44,6 +47,7 @@ function GetUserByID ($id) {
     $result = $conn->query($qry);
     return $result->fetch_assoc();
 }
+
 
 function CheckPwd ($send, array $got) {
     if (password_verify($send, $got['pwd'])) {
@@ -68,9 +72,4 @@ if (!isset($_POST['login']) || !isset($_POST['pwd']) || !isset($_SESSION['id']))
     $auth = GetUserByID($_SESSION['id']);
     displayHello($auth);
 }
-
-
-
-
-
 

@@ -204,3 +204,8 @@ svg {
 .close-btn svg {
 width : 1.5em;
 }
+
+.register-container {
+    border: 3px solid #343a40;
+    border-radius: 3rem;
+}
