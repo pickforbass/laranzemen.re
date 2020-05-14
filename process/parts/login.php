@@ -57,20 +57,16 @@ function CheckPwd ($send, array $got) {
 }
 
 
-if (isset($_SESSION['id'])){
-    $auth = GetUserByID($_SESSION['id']);
-    displayHello($auth);
-}
-
-if (isset($_POST['login']) && isset($_POST['pwd'])) {
+if (!isset($_POST['login']) || !isset($_POST['pwd']) || !isset($_SESSION['id'])) {
+    displayConnexion();
+} else if (isset($_POST['login']) && isset($_POST['pwd'])) {
     $auth = GetUserByName($_POST['login']);
     $password = $_POST['pwd'];
     $check = CheckPwd($password, $auth);
     displayHello($check);
-}
-
-if (!isset($_POST['login']) || !isset($_POST['pwd']) || !isset($_SESSION['id'])) {
-    displayConnexion();
+} else if (isset($_SESSION['id'])){
+    $auth = GetUserByID($_SESSION['id']);
+    displayHello($auth);
 }
 
 
