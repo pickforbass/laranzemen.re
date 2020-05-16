@@ -3,7 +3,6 @@
 /* Elements of vue :
         html & body
         Titles
-        main-container
         lists
         btn-primary
         <a>
@@ -193,7 +192,8 @@ svg {
 }
 
 .modal-window[aria-hidden="false"] {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 .close-btn {
@@ -214,4 +214,10 @@ width : 1.5em;
     background: #fadb02;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+
+/*Tables styles*/
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color:#fadb02;
 }

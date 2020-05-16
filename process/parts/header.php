@@ -1,8 +1,7 @@
 <?php
 session_start();
 include "connDB.php";
-global $conn;
-?>
+global $conn; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,9 +26,7 @@ global $conn;
         </a>
     </div>
 
-    <?php
-    include "login.php";
-    ?>
+<?php include "login.php"; ?>
 
 </header>
 <nav>

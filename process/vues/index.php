@@ -3,9 +3,7 @@ require "../parts/header.php";
 global $conn;
 
 $recipe_result = $conn->query("SELECT name, id, img FROM recipe ORDER BY RAND() LIMIT 3");
-$article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
-
-?>
+$article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3"); ?>
 
 
 <main class="container-fluid mt-5 row">
@@ -36,18 +34,18 @@ $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3");
 
     <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">What's up blog ?!</h3>
     <div class=" container col-md-10 d-flex justify-content-around bg-light">
-        <?php
-        while ($row = $article_result->fetch_assoc()){
-            ?>
-            <a href="article.php?id=<?= $row['id'] ?>" class="col-md-4">
-                <div class="card m-4 bg-white"">
-                    <img src="../../sources/img/<?= $row['img'] ?>" class="card-img">
-                    <div class="card-body mt-1">
-                        <h4 class="text-center"><?= $row['title'] ?></h4>
-                    </div>
+        <?php while ($row = $article_result->fetch_assoc()){ ?>
+
+        <a href="article.php?id=<?= $row['id'] ?>" class="col-md-4">
+            <div class="card m-4 bg-white"">
+                <img src="../../sources/img/<?= $row['img'] ?>" class="card-img">
+                <div class="card-body mt-1">
+                    <h4 class="text-center"><?= $row['title'] ?></h4>
                 </div>
-            </a>
+            </div>
+        </a>
         <?php } ?>
+
     </div>
 </main>
 

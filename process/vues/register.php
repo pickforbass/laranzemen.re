@@ -88,8 +88,8 @@ function register(){?>
             </div>
         </div>
     </main>
-<?php
-}
+
+<?php }
 
 function registerOK(){ ?>
     <main class="container-fluid mt-5 row">
@@ -108,38 +108,30 @@ function registerOK(){ ?>
         </div>
     </main>
 
-<?php
-}
+<?php }
 
-if (isset($_POST['new-name']) &&
-    isset($_POST['new-mail']) &&
-    isset($_POST['new-pwd']) &&
-    isset($_POST['new-pwd-check'])) {
+if (isset($_POST['new-name']) && isset($_POST['new-mail']) &&
+    isset($_POST['new-pwd']) && isset($_POST['new-pwd-check'])) {
 
     $name = $_POST['new-name'];
     $mail = $_POST['new-mail'];
-    $pwd = ($_POST['new-pwd'] === $_POST['new-pwd-check']) ? password_hash($_POST['new-pwd'], PASSWORD_DEFAULT) : 'err';
+    $pwd = ($_POST['new-pwd'] === $_POST['new-pwd-check']) ? password_hash($_POST['new-pwd'], PASSWORD_BCRYPT) : false;
 
-    $req = "INSERT INTO user VALUES
-                (NULL,
-                '$name',
-                '$pwd',
-                '$mail',
-                '1',
-                NULL,
-                NULL,
-                NULL)";
+    $prepared = $conn->prepare("INSERT INTO user VALUES (NULL, ?, ?, ?,'1', NULL, NULL, NULL)");
+    $prepared->bind_param("sss", $name, $pwd, $mail);
+    $result = $prepared->execute();
 
-    if (!$conn->query($req)) {
+    if (!$result) {
         echo "<p class='text-center m-5'> Un problème est survenu. Merci de recommencer.</p>";
         echo "<p class='text-center m-5'>".mysqli_errno($conn)." : </br>".mysqli_error($conn)."</p>";
         register();
+
     } else {
         registerok();
+
     }
 
 } else {
-
     register();
 }
 

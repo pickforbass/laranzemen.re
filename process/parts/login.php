@@ -2,10 +2,10 @@
 
 function displayConnexion() { ?>
     <div>
-        <form action= "#" method= "post">
+        <form method="post">
             <input type="text" id="login" name="login">
             <input type="password" id="pwd" name="pwd">
-            <button class="btn btn-primary">Me connecter</button>
+            <button class="btn btn-primary" type="submit">Me connecter</button>
         </form>
         <span class="float-right pr-2">
             <a href="register.php" >
@@ -16,25 +16,34 @@ function displayConnexion() { ?>
                 Mot de passe oublié
             </a>
         </span>
-    </div>
-<?php }
+    </div> <?php
+}
 
 
 function displayHello (array $arr) { ?>
     <span class="float-right pr-2">
+
         <a href="user-area.php?id=<?= $arr['id'] ?>" >
-            <?= $arr['username'] ?>
+            Bonjour <?= $arr['username'] ?>
         </a>
-    </span>
-<?php }
+    </span><?php
+}
 
 
 function GetUserByName ($name) {
+    // TODO transformes moi ca en prepare !!!!!!
     global $conn;
     $qry = "SELECT *
             FROM user
             WHERE username = '$name'";
-    $result = $conn->query($qry);
+
+    if (!$conn->query($qry)) {
+        echo "<p class='text-center m-5'> Un problème est survenu. Merci de recommencer.</p>";
+        echo "<p class='text-center m-5'>".mysqli_errno($conn)." : </br>".mysqli_error($conn)."</p>";
+    } else {
+        $result = $conn->query($qry);
+    }
+
     return $result->fetch_assoc();
 }
 
@@ -50,26 +59,39 @@ function GetUserByID ($id) {
 
 
 function CheckPwd ($send, array $got) {
+
     if (password_verify($send, $got['pwd'])) {
         /*Set session*/
         $_SESSION['r'] = $got['rank'];
         $_SESSION['id'] = $got['id'];
         return GetUserByID($_SESSION['id']);
-        } else {
-        header("Location: lostpwd.php?as='err'");
+
+    } else {
+        $error = base64_encode(urlencode("Hello les amis je suis une erreur"));
+
+        $error = urldecode("Votre mot de passe est erroné. Veuillez recommencer.");
+        $error = base64_encode($error);
+
+        header("Location: lostpwd.php?as=$error");
     }
+
 }
 
 
-if (!isset($_POST['login']) || !isset($_POST['pwd']) || !isset($_SESSION['id'])) {
+if ( (!isset($_POST['login']) || !isset($_POST['pwd'])) && !isset($_SESSION['id']) ) {
     displayConnexion();
-} else if (isset($_POST['login']) && isset($_POST['pwd'])) {
+
+} elseif (isset($_POST['login']) && isset($_POST['pwd'])) {
     $auth = GetUserByName($_POST['login']);
     $password = $_POST['pwd'];
     $check = CheckPwd($password, $auth);
+
     displayHello($check);
-} else if (isset($_SESSION['id'])){
+
+} elseif (isset($_SESSION['id'])){
+
     $auth = GetUserByID($_SESSION['id']);
     displayHello($auth);
-}
+} else {
 
+}

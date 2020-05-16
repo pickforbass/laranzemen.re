@@ -2,47 +2,20 @@ let plusButton = document.getElementById('plus');
 let minusButton = document.getElementById('minus');
 let liter = document.getElementById('liter');
 
+function updateQuantity(operation){
+    let qty = parseInt(liter.innerHTML);
+    let unity;
 
-//Event Listeners functions
-function add(){
-    liter.innerHTML = parseInt(liter.innerHTML) + 1;
-    clear();
-    updateQuantity();
-
-}
-
-function less(){
-    if (parseInt(liter.innerHTML) > 1){
-        liter.innerHTML = parseInt(liter.innerHTML) - 1;
-        updateQuantity();
-
-    }
-}
-
-
-// Update All
-function updateAll() {
-    let qty = updateQuantity()
-    //let measure = updateMeasure(qty);
-}
-
-function updateQuantity(){
-    var qty;
-    var unity;
+    liter.innerHTML = parseInt(liter.innerHTML) + operation;
 
     for (let data of document.querySelectorAll('[data-qty]')) {
-        qty = parseInt(data.dataset.qty)*parseInt(liter.innerHTML);
         let span = document.createElement('span');
-        span.innerHTML = qty;
-        data.appendChild(span);
-    }
+        let computed = (parseInt(data.dataset.qty) * qty);
 
-    for (let data of document.querySelectorAll('[data-unit]')) {
         switch (data.dataset.unit) {
-
             case "g":
-                if (qty >= 1000) {
-                    qty = parseInt(qty)/1000;
+                if (computed >= 1000) {
+                    computed /= 1000;
                     unity = ' kg de ';
                 } else {
                     unity = ' g de ';
@@ -50,8 +23,8 @@ function updateQuantity(){
                 break;
 
             case "cl":
-                if (qty >= 100) {
-                    qty = parseInt(qty)/100;
+                if (computed >= 100) {
+                    computed /= 100;
                     unity = ' l de ';
                 } else {
                     unity = ' cl de ';
@@ -66,22 +39,27 @@ function updateQuantity(){
             default :
                 unity = '';
                 break;
-
         }
-        let span = document.createElement('span');
-        span.innerHTML = unity;
+
+        // Adding quantity to previously created span.
+        let spanQuantity = document.createElement('span')
+        spanQuantity.innerHTML = unity;
+
+        // Adding span to its parent element.
+        data.innerHTML = '';
+        span.innerHTML = computed.toString();
         data.appendChild(span);
+        data.appendChild(spanQuantity);
     }
 }
 
 
-plusButton.addEventListener("click", add);
-minusButton.addEventListener("click", less);
-updateQuantity();
+plusButton.addEventListener("click", function() {
+    updateQuantity(1);
+});
 
+minusButton.addEventListener("click", function() {
+    updateQuantity(-1);
+});
 
-
-    for (let data of document.querySelectorAll('[data-name]')) {
-        let space = data.innerHTML.length;
-        console.log (space);
-    }
+updateQuantity(1);

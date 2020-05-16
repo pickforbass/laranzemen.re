@@ -18,18 +18,28 @@ $getIngredients = "SELECT i.name, q.qty, q.unity
                  ON q.ingredient_id = i.id
                  WHERE q.recipe_id = $id_recipe";
 
-$res2 = $conn->query($getIngredients);
-?>
+$res2 = $conn->query($getIngredients); ?>
 
 <main class="container-fluid pt-3 pb-5">
     <div class="row">
-        <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5"><?= $recipe['name'] ?></h3>
-        <p id="author" class="text-right col-sm-10">par <span><?= $recipe['username'] ?></span></p>
+
+        <h3 class="col-sm-10 pt-1 pb-2 mt-5 mb-5">
+            <?= $recipe['name'] ?>
+        </h3>
+        <p id="author" class="text-right col-sm-10">
+            <span>
+                par <?= $recipe['username'] ?>
+            </span>
+        </p>
 
         <div class="container d-flex justify-content-between">
             <ul class="list-group col-sm-4 pr-3">
                 <li class="list-group-item mb-2">
-                        <svg class="bi bi-caret-left-fill" id='minus' width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bi bi-caret-left-fill"
+                             id='minus' width="1em"
+                             viewBox="0 0 16 16"
+                             fill="currentColor"
+                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z"/>
                         </svg>
                     <span id="liter">1</span>
@@ -41,7 +51,9 @@ $res2 = $conn->query($getIngredients);
 
                 <?php while ($ingredient = $res2->fetch_assoc()){ ?>
                 <li class="list-group-item mb-2">
-                    <span class='ingredient'data-qty="<?= $ingredient['qty'] ?>" data-unit="<?= $ingredient['unity'] ?>" data-prop="de" data-name="<?= $ingredient['name'] ?>"></span>
+                    <span class='ingredient' data-qty="<?= $ingredient['qty'] ?>"
+                          data-unit="<?= $ingredient['unity'] ?>"
+                          data-name="<?= $ingredient['name'] ?>"></span>
                     <span><?= $ingredient['name']?></span>
                 </li>
                 <?php } ?>
@@ -64,5 +76,4 @@ $res2 = $conn->query($getIngredients);
 
 <script src="../../scripts/script.js"></script>
 <?php
-require "../parts/footer.php";
-?>
+require "../parts/footer.php"; ?>
