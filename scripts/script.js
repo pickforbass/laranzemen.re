@@ -3,10 +3,10 @@ let minusButton = document.getElementById('minus');
 let liter = document.getElementById('liter');
 
 function updateQuantity(operation){
-    let qty = parseInt(liter.innerHTML);
+    let qty = parseInt(liter.innerHTML) + operation;
     let unity;
 
-    liter.innerHTML = parseInt(liter.innerHTML) + operation;
+    liter.innerHTML = qty;
 
     for (let data of document.querySelectorAll('[data-qty]')) {
         let span = document.createElement('span');
@@ -59,7 +59,12 @@ plusButton.addEventListener("click", function() {
 });
 
 minusButton.addEventListener("click", function() {
-    updateQuantity(-1);
-});
+    let liter = document.getElementById('liter');
+    while(parseInt(liter)>=1) {
+        updateQuantity(-1);
+    }
 
-updateQuantity(1);
+    })
+
+
+updateQuantity(0);

@@ -9,18 +9,18 @@ global $conn; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, user-scalable=0">
-    <title>l'aranzemen</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1e527daaa5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <title>l'aranzemen</title>
 </head>
 <body class="page text-dark">
 <header class="d-flex justify-content-between p-3">
     <div>
         <a href="index.php">
         <img src="" alt="">
-        <div>
-            <h1>Laranzemen.re</h1>
+        <div class="ml-3">
+            <h1 class="mb-1">Laranzemen.re</h1>
             <h2>L'annuaire des rhums arrangés</h2>
         </div>
         </a>

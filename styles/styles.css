@@ -41,6 +41,11 @@ a:hover {
     font-weight: 700;
 }
 
+a:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
 .sidebar {
     min-height: 30rem;
 }
@@ -219,5 +224,5 @@ width : 1.5em;
 
 /*Tables styles*/
 .table-striped tbody tr:nth-of-type(2n+1) {
-    background-color:#fadb02;
+    background-color:#fadb02
 }

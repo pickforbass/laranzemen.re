@@ -52,32 +52,15 @@ contient le footer et les balises fermantes
 ###A faire
 
 
-##### Login.php
-
-Régler bug
-
-##### comment-area.php
-
-Ajouter l'input pour le commentaire
-
-##### recipe.php
-
-gérer le calculateur
-alléger la requete
-
-
 ##### lostpd.php
 
 tout
 
-
-##### shop.php
-
-on oublie
-
 ##### user-area.php
 
-finir les fenetres modal
-créer les requetes sql (doit d'abord régler le bug de login.php)
+créer les requetes sql
+
+#### Mailtrap.io
+
 
 

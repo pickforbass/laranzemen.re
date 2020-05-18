@@ -21,12 +21,18 @@ function displayConnexion() { ?>
 
 
 function displayHello (array $arr) { ?>
-    <span class="float-right pr-2">
+    <div class="float-right pr-2 text-right">
+        <p>Bonjour <?= $arr['username'] ?></p>
 
-        <a href="user-area.php?id=<?= $arr['id'] ?>" >
-            Bonjour <?= $arr['username'] ?>
-        </a>
-    </span><?php
+        <div>
+            <a href="user-area.php?id=<?= $arr['id'] ?>" >
+                Mon espace utilisateur
+            </a>
+            <form action="index.php" method="post">
+                <button type="submit" name="logout" class="btn btn-primary border-0 m-0 p-0">Déconnecter</button>
+            </form>
+        </div>
+    </div><?php
 }
 
 
