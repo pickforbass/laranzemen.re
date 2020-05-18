@@ -60,11 +60,10 @@ plusButton.addEventListener("click", function() {
 
 minusButton.addEventListener("click", function() {
     let liter = document.getElementById('liter');
-    while(parseInt(liter)>=1) {
+    if(parseInt(liter) >= 1) {
         updateQuantity(-1);
     }
-
-    })
+})
 
 
 updateQuantity(0);

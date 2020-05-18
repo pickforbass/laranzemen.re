@@ -42,20 +42,20 @@ if (isset($_FILES['recipe-upload']) && $_FILES['recipe-upload']['error'] == 0) {
     $tmp_name = $_FILES['recipe-upload']['tmp_name'];
     $type = $_FILES['recipe-upload']['type'];
     $name = $_FILES['recipe-upload']['name'];
-    $route = "../../sources/img/";
+    $route = dirname(__FILE__) . "/../../sources/img/";
+    var_dump(["exixts" => file_exists($route)]);
+
+    echo $name . "<br />";
+    echo $tmp_name . "<br />";
 
     if (testing_size($size)) {
         if (testing_type($type)) {
-            print_r(substr($name, -3));
-            echo "<br /> $name <br />";
-            $name = rename($name,'image.jpg');
-            move_uploaded_file($name, $route);
+            $result = move_uploaded_file($tmp_name, $route . "image-". uniqid(). ".jpg");
+            // Delete a file
+            // unlink($route . "image-". uniqid(). ".jpg");
         } else {
-            print_r($type);
             echo "Pas le bon type de fichier.";
-
         }
-
     } else {
         echo "trop lourd / trop leger";
     }
