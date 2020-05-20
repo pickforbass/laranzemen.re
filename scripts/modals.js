@@ -1,30 +1,25 @@
 //First, get buttons and link them to modal windows
-let buttons = document.querySelectorAll('[aria-haspopup="dialog"]');
+const buttons = document.querySelectorAll('[aria-haspopup="dialog"]');
 const mainPage = document.querySelector('.page');
+const crosses = document.querySelectorAll('[aria-dismiss]');
 
-console.log(buttons);
+
 buttons.forEach((button) => {
     let window = document.getElementById(button.getAttribute('aria-controls'));
     button.addEventListener('click', ()=> {
-        console.log('ok');
         openWindow(window);
 
     })
 });
 
-document.getElementById('add-recipe-btn').addEventListener('click', function () {
-    console.log('ok');
-});
-
 //Then, get closing buttons and link them to modal windows
-
-const crosses = document.querySelectorAll('[aria-dismiss]');
 
 crosses.forEach((cross) =>{
     let window = document.getElementById(cross.getAttribute('aria-dismiss'));
+    let box = window.getAttribute('aria-dismiss-box');
     if(cross.parentElement) {
         cross.parentElement.addEventListener('click', (event) => {
-            let elements = document.querySelectorAll('#add-recipe-box *');
+            let elements = document.querySelectorAll('#' + box + ' *');
             if(!Array.prototype.slice.call(elements).includes(event.target)) {
                 closeWindow(window);
             }

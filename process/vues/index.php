@@ -10,7 +10,7 @@ $recipe_result = $conn->query("SELECT name, id, img FROM recipe ORDER BY RAND() 
 $article_result = $conn->query("SELECT * FROM article ORDER BY RAND() LIMIT 3"); ?>
 
 
-<main class="container-fluid mt-5 row">
+<main class="container-fluid mt-5">
     <div class="col-sm-10 mx-auto">
         <p class="container">
             Bienvenue les fans du rhum arrangé ! Retrouvez ici les recettes de vos digestifs préférés. Avec une

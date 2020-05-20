@@ -24,7 +24,15 @@ $date = date('d-m-Y', strtotime($article['date']));
 
         <div class="article-infos">
             <h3 class="article-title"><?= $article['title']?></h3>
-            <p id="author" class="text-right 8-col-sm"><small>par <span><?= $article['username'] ?> | <?= $date ?></span></small></p>
+            <p id="author" class="text-right 8-col-sm">
+                <small>
+                    par
+                    <span><?= $article['username'] ?>
+                        |
+                        <?= $date ?>
+                    </span>
+                </small>
+            </p>
         </div>
 
         <p class="container"><?= nl2br($article['content']) ?></p>

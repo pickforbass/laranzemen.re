@@ -150,15 +150,6 @@ footer {
 }
 
 
-/* Set articles.php & recipes.php*/
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2rem;
-}
-
-
 .card {
     box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.75);
 }
@@ -170,8 +161,8 @@ footer {
 }
 
 svg {
-    color: #fadb02;
-    width: inherit;
+    color: currentColor;
+    width: 1em;
 }
 
 /*dialog overlay*/
@@ -192,6 +183,7 @@ svg {
 }
 
 /*hidden and showed dialog*/
+
 .modal-window[aria-hidden="true"] {
     display: none;
 }

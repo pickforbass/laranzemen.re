@@ -37,7 +37,6 @@ function displayHello (array $arr) { ?>
 
 
 function GetUserByName ($name) {
-    // TODO transformes moi ca en prepare !!!!!!
     global $conn;
     $qry = "SELECT *
             FROM user
@@ -73,8 +72,6 @@ function CheckPwd ($send, array $got) {
         return GetUserByID($_SESSION['id']);
 
     } else {
-        $error = base64_encode(urlencode("Hello les amis je suis une erreur"));
-
         $error = urldecode("Votre mot de passe est erroné. Veuillez recommencer.");
         $error = base64_encode($error);
 

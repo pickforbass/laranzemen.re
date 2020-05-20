@@ -1,6 +1,6 @@
-let plusButton = document.getElementById('plus');
-let minusButton = document.getElementById('minus');
-let liter = document.getElementById('liter');
+const plusButton = document.getElementById('plus');
+const minusButton = document.getElementById('minus');
+const liter = document.getElementById('liter');
 
 function updateQuantity(operation){
     let qty = parseInt(liter.innerHTML) + operation;
@@ -33,23 +33,23 @@ function updateQuantity(operation){
 
             case "cc":
             case "cs":
-                unity = data.dataset.unit;
+                unity = ' ' + data.dataset.unit + " de ";
                 break;
 
             default :
-                unity = '';
+                unity = ' ';
                 break;
         }
 
-        // Adding quantity to previously created span.
-        let spanQuantity = document.createElement('span')
-        spanQuantity.innerHTML = unity;
+        // Adding unity to a newer created span.
+        let spanUnity = document.createElement('span')
+        spanUnity.innerHTML = unity;
 
         // Adding span to its parent element.
         data.innerHTML = '';
         span.innerHTML = computed.toString();
         data.appendChild(span);
-        data.appendChild(spanQuantity);
+        data.appendChild(spanUnity);
     }
 }
 
@@ -59,8 +59,8 @@ plusButton.addEventListener("click", function() {
 });
 
 minusButton.addEventListener("click", function() {
-    let liter = document.getElementById('liter');
-    if(parseInt(liter) >= 1) {
+    let newliter = liter.innerHTML;
+    if(parseInt(newliter) >= 1) {
         updateQuantity(-1);
     }
 })
